@@ -1,9 +1,11 @@
 function [] = main(project)
     
-    global MAIN
-    MAIN = [];
+    global MAIN CONST PLOT
+    MAIN    = [];
+    CONST   = [];
+    PLOT    = [];
     
-    run(project)
+    run(project);
 
     select_method;
     

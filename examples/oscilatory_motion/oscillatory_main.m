@@ -1,18 +1,22 @@
 function [] = oscillatory_main()
     
-    global MAIN CONSTANTS
+    global MAIN CONST PLOT
     
-    MAIN.t_zero     = 0;                        % Starting time
-    MAIN.y_zero     = [-2,3];                   % Initial conditions
-    MAIN.step       = 0.01;                    % Step size
-    MAIN.t_limit    = 20;                       % Limit of the computation
-    MAIN.dynamics   = 'oscillatory_dynamics';    % Name of dynamics function
-    MAIN.exact_sol  = 'oscillatory_exact';       % Name of exact solution function
-    MAIN.method     = 'RK_8-12';                % Choose the method
+    % Constants associated with the dynamics
+    CONST.y0    = [-2, 3];  % Initial state
+    CONST.tspan = [0, 20];  % Start time, end time
+    CONST.k     = 5;        % Spring constant
+    CONST.c     = 0.5;      % Damping constant
+    CONST.m     = 1;        % Mass of the system
     
-    % Define the constants associated with the dynamics
-    CONSTANTS.k = 5;    % Spring constant
-    CONSTANTS.c = 0.5;  % Damping constant
-    CONSTANTS.m = 1;    % Mass of the system
-
+    % Parameters associated with the computation
+    MAIN.dynamics   = 'oscillatory_dynamics'; 	% Name of dynamics function
+    MAIN.method     = 'RK_4';                % Choose the method
+    MAIN.step       = 0.01;                     % Step size
+    
+    % Parameters associated with the plotting
+    PLOT.types     = {'A'};
+    PLOT.y_names   = {'Position', 'Velocity'};
+    PLOT.y_units   = {'m', 'm/s'};
+    PLOT.exact_sol = 1;             % Compare with 'ode45'? Yes: 1, No: 0
 end
