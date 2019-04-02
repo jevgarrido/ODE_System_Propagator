@@ -6,12 +6,13 @@ function [dydt] = lorenz_dynamics(~,y)
     % The first input is the the independent variable (usualy time), and
     % the second input is the current state of the system (which can be a matrix).
     
-    global CONSTANTS
+    global CONST
     
-    y = reshape(y, [], 1);
+    sigma   = CONST.sigma;
+    rho     = CONST.rho;
+    beta    = CONST.beta;
     
-    dydt = [CONSTANTS.sigma*y(2) - CONSTANTS.sigma*y(1);...
-            CONSTANTS.rho*y(1) - y(1)*y(3) - y(2);...
-            y(1)*y(2) - CONSTANTS.beta*y(3)];
-    
+    dydt = [sigma*y(2) - sigma*y(1);...
+            rho*y(1) - y(1)*y(3) - y(2);...
+            y(1)*y(2) - beta*y(3)];
 end

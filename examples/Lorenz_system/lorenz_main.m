@@ -1,17 +1,22 @@
 function [] = lorenz_main()
         
-    global MAIN CONSTANTS
+    global MAIN CONST PLOT
     
-    MAIN.t_zero     = 0;                    % Starting time
-    MAIN.y_zero     = [1,1,1];     % Initial conditions
-    MAIN.step       = 0.001;                % Step size
-    MAIN.t_limit    = 50;                   % Limit of the computation
+    % Constants associated with the dynamics
+    CONST.y0    = [1, 1, 1];    % Initial state
+    CONST.tspan = [0, 50];      % Start time, end time
+    CONST.sigma = 10;
+    CONST.rho   = 28;
+    CONST.beta  = 8/3;
+    
+    % Parameters associated with the computation
     MAIN.dynamics   = 'lorenz_dynamics';  % Name of dynamics function
-    MAIN.method     = 'Euler';            % Choose the method
-    
-    % Define the constants associated with the dynamics
-    CONSTANTS.sigma = 10;
-    CONSTANTS.rho   = 28;
-    CONSTANTS.beta  = 8/3;
+    MAIN.method     = 'RK_8-12';            % Choose the method
+    MAIN.step       = 0.01;                % Step size
 
+    % Parameters associated with the plotting
+    PLOT.types     = {'A'};
+    PLOT.y_names   = {'x', 'y', 'z'};
+    PLOT.y_units   = {'-', '-', '-'};
+    PLOT.exact_sol = 0;             % Compare with 'ode45'? Yes: 1, No: 0
 end
