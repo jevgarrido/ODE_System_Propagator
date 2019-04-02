@@ -1,4 +1,4 @@
-function [] = numeric_main(project)
+function [] = main(project)
     
     global MAIN
     MAIN = [];
