@@ -4,8 +4,7 @@ function [] = main(project)
     MAIN = [];
     
     run(project)
-    
-    % Select the set of coefficients with respect to the chosen method
+
     select_method;
     
     run_method;
