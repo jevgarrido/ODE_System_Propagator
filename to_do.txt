@@ -1,29 +1,22 @@
 # To work on
 
-+ Implement simulation (when the states are coordinates)
-	. Type A - default plotting (time in h-axis), but with adequate labels and titling;
-	. Type B - 2-D or 3-D coordinates, with time represented by color.
-	. Type C - 2-D coordinates with time represented by 3rd dimension;
-	. Type D - 2-D or 3-D coordinates updating in 'real time' as a motion picture;
-	
-+ Regarding Type A plots:
-	. Color should distinguish exact solution from mehtod(s);
-	. Shapes should distinguish the specific states.
-	. Decide if Type A should always be plotted by default.
-	
 + Improve the ploting preferences set by the user in the main function - examples of preferences:
 	. name and units of the states and of the independent variable.
 	. position of labels.
 	. title of plot/plots.
 	
-
++ Implement simulation (when the states are coordinates)
+	. Type A - default plotting (time in h-axis);
+	. Type B - 2-D or 3-D coordinates, with time represented by color;
+	. Type C - 2-D coordinates with time represented by 3rd dimension;
+	
++ Regarding Type A plots:
+	. Color should distinguish exact solution from mehtod(s);
+	. Shapes should distinguish the specific states.
+	
 
 + Add option to solve with various methods
 	. choose to plot the solutions toguether for comparison or to plot them in separate figures.
 
 
-+ Implement embeded methods for truncation error estimation.
-
-+ Implement adaptive stepsize.
-
-+ Implement implicit methods.
++ Implement embeded methods for truncation error estimation and subsequent implementation of adaptive stepsize.
