@@ -17,12 +17,17 @@ Enjoy :)
 
 # Here Are Some Sample Images
 
+##### Predator - Prey System
 ![alt text]( https://github.com/jevgarrido/ODE_System_Solver/blob/master/examples/predator_prey/Predator_Prey_Type_A.png )
 
+##### Single Pendulum - Non-Linear Equation w/ Damping
 ![alt text]( https://github.com/jevgarrido/ODE_System_Solver/blob/master/examples/pendulum/Pendulum_Type_B.png )
 
+##### Linear Harmonic Oscillator w/ Damping
 ![alt text]( https://github.com/jevgarrido/ODE_System_Solver/blob/master/examples/oscilatory_motion/Oscillatory_Type_C.png )
 
+##### Lorenz Atractor/System
 ![alt text]( https://github.com/jevgarrido/ODE_System_Solver/blob/master/examples/Lorenz_system/Lorenz_Type_B.png )
 
+##### Simple Orbital Motion
 ![alt text]( https://github.com/jevgarrido/ODE_System_Solver/blob/master/examples/orbital_mechanics_simple/Orbital_Simple_Type_B.png )
