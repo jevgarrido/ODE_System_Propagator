@@ -7,7 +7,7 @@ function [] = pendulum_main()
     CONST.tspan = [0, 15];              % Start time, end time
     CONST.g     = 9.81;                 % Acceleration due to gravity
     CONST.L     = 1;                    % Length of the pendulum
-    CONST.mu    = 0;                    % Damping coefficient
+    CONST.mu    = 0.1;                    % Damping coefficient
     
     % Parameters associated with the computation
     MAIN.dynamics   = 'pendulum_dynamics';  % Name of dynamics function

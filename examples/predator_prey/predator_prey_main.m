@@ -19,5 +19,5 @@ function [] = predator_prey_main()
     PLOT.types      = {'A', 'C'};
     PLOT.y_names    = {'Number of Rabbits', 'Number of Foxes'};
     PLOT.y_units    = {'unit', 'unit'};
-    PLOT.ode45      = 1;             % Compare with 'ode45'? Yes: 1, No: 0
+    PLOT.ode45      = 0;             % Compare with 'ode45'? Yes: 1, No: 0
 end

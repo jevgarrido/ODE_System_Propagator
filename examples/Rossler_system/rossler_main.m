@@ -4,7 +4,7 @@ function [] = rossler_main()
     
     % Constants associated with the dynamics
     CONST.y0    = [1, 1, 1];    % Initial state
-    CONST.tspan = [0, 50];     	% Start time, end time
+    CONST.tspan = [0, 100];     	% Start time, end time
     CONST.a     = 0.3;
     CONST.b     = 0.2;
     CONST.c     = 5.7;
@@ -18,5 +18,5 @@ function [] = rossler_main()
     PLOT.types      = {'A', 'B'};
     PLOT.y_names    = {'X Coordinate', 'y Coordinate', 'z Coordinate'};
     PLOT.y_units    = {'unit', 'unit'};
-    PLOT.ode45      = 1;             % Compare with 'ode45'? Yes: 1, No: 0
+    PLOT.ode45      = 0;             % Compare with 'ode45'? Yes: 1, No: 0
 end

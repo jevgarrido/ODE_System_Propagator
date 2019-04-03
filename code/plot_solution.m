@@ -17,7 +17,6 @@ function [] = plot_this(type, which_fig)
     switch type
         case 'A'
             plot(MAIN.t,MAIN.y), hold off
-            
             grid on
             xlabel('Time')
             ylabel('States')
@@ -35,7 +34,6 @@ function [] = plot_this(type, which_fig)
                 end
             end
             legend(PLOT.y_names, 'location', 'best')
-            
         %------------------------------------------------------------------
         case 'B'
             switch size(MAIN.y,1) 
