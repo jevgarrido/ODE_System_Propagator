@@ -18,7 +18,7 @@ function [] = orbital_simple_main()
     % Parameters associated with the computation
     MAIN.dynamics   = 'orbital_simple_dynamics';    % Name of dynamics function
     MAIN.method     = 'RK_8-12';                    % Choose the method
-    MAIN.step       = 1500;                           % Step size [min]
+    MAIN.step       = 100;                           % Step size [min]
     
     % Parameters associated with the plotting
     PLOT.types      = {'A', 'B'};
