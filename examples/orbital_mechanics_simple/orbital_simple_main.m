@@ -25,7 +25,7 @@ function [] = orbital_simple_main()
     PLOT.y_names    = {'Pos x','Pos y','Pos z', 'Vel x','Vel y','Vel z'};
     PLOT.y_units    = {'m', 'm', 'm', 'm/s', 'm/s', 'm/s'};
     PLOT.ode45      = 0;             % Compare with 'ode45'? Yes: 1, No: 0
-    PLOT.sphere     = 1;
+    PLOT.sphere     = CONST.Re;
 end
 
 %% Auxiliary Functions

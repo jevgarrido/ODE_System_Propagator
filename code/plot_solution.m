@@ -43,9 +43,9 @@ function [] = plot_this(type, which_fig)
                     z   = [MAIN.y(3,:);MAIN.y(3,:)];
                     if isfield(PLOT, 'sphere') && logical(PLOT.sphere)
                         [Xsph,Ysph,Zsph] = sphere(30);
-                        Xsph = CONST.Re*Xsph;
-                        Ysph = CONST.Re*Ysph;
-                        Zsph = CONST.Re*Zsph;
+                        Xsph = PLOT.sphere*Xsph;
+                        Ysph = PLOT.sphere*Ysph;
+                        Zsph = PLOT.sphere*Zsph;
                         surf(Xsph, Ysph, Zsph, 'facecolor', [80, 80, 220]./255)
                     end
                     xlabel(PLOT.y_names{1})
@@ -66,7 +66,7 @@ function [] = plot_this(type, which_fig)
                     ylabel(PLOT.y_names{2})
                 otherwise
                     disp('In order to use a plot of Type B please make sure your state space is of size 2 or 3')
-                    close (which_fig)
+                    close(which_fig)
                     return
             end
             color   = [MAIN.t;MAIN.t];
