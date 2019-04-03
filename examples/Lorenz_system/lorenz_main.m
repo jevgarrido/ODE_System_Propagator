@@ -15,8 +15,8 @@ function [] = lorenz_main()
     MAIN.step       = 0.01;                % Step size
 
     % Parameters associated with the plotting
-    PLOT.types     = {'A'};
-    PLOT.y_names   = {'x', 'y', 'z'};
-    PLOT.y_units   = {'-', '-', '-'};
-    PLOT.exact_sol = 0;             % Compare with 'ode45'? Yes: 1, No: 0
+    PLOT.types      = {'A'};
+    PLOT.y_names    = {'x', 'y', 'z'};
+    PLOT.y_units    = {'unit', 'unit', 'unit'};
+    PLOT.ode45      = 0;             % Compare with 'ode45'? Yes: 1, No: 0
 end

@@ -1,17 +1,22 @@
 function [] = pendulum_main()
     
-    global MAIN CONSTANTS
+    global MAIN CONST PLOT
     
-    MAIN.t_zero     = 0;                    % Starting time
-    MAIN.y_zero     = [175,0.5]*pi/180;     % Initial conditions
-    MAIN.step       = 0.001;                % Step size
-    MAIN.t_limit    = 10;                   % Limit of the computation
+    % Constants associated with the dynamics
+    CONST.y0    = [175, 0.5]*pi/180;    % Initial state
+    CONST.tspan = [0, 15];              % Start time, end time
+    CONST.g     = 9.81;                 % Acceleration due to gravity
+    CONST.L     = 1;                    % Length of the pendulum
+    CONST.mu    = 0.05;                 % Damping coefficient
+    
+    % Parameters associated with the computation
     MAIN.dynamics   = 'pendulum_dynamics';  % Name of dynamics function
     MAIN.method     = 'RK_8-12';            % Choose the method
-    
-    % Define the constants associated with the dynamics
-    CONSTANTS.g     = 9.81;     % Acceleration due to gravity
-    CONSTANTS.L     = 1;        % Length of the pendulum
-    CONSTANTS.mu    = 0.1;      % Damping coefficient
+    MAIN.step       = 0.01;                 % Step size
 
+    % Parameters associated with the plotting
+    PLOT.types      = {'A'};
+    PLOT.y_names    = {'Angle', 'Angular Velocity'};
+    PLOT.y_units    = {'rad', 'rad/s'};
+    PLOT.ode45      = 1;             % Compare with 'ode45'? Yes: 1, No: 0
 end

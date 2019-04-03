@@ -6,9 +6,5 @@ function [dydt] = oscillatory_dynamics(~,y)
     c = CONST.c;
     m = CONST.m;
     
-    A       = [ 0, 1;...
-                -k/m, -c/m ];
-    
-    dydt    = A * reshape(y, [], 1);
-    
+    dydt    = [ 0, 1; -k/m, -c/m ] * reshape(y, [], 1);
 return

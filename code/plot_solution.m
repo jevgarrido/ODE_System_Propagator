@@ -21,7 +21,7 @@ function [] = plot_this(type)
             xlabel('Time')
             ylabel('States')
             
-            if PLOT.exact_sol
+            if PLOT.ode45
                 fun_name = MAIN.dynamics;
                 tspan    = CONST.tspan;
                 y0       = reshape(CONST.y0,[],1);

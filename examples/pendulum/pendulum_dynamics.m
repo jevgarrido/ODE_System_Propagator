@@ -6,11 +6,13 @@ function [dydt] = pendulum_dynamics(~,y)
     % The first input is the the independent variable (usualy time), and
     % the second input is the current state of the system (which can be a matrix).
     
-    global CONSTANTS
+    global CONST
     
-    y = reshape(y, [], 1);
+    mu  = CONST.mu;
+    g   = CONST.g;
+    L   = CONST.L;
     
     dydt    = [ y(2);...
-                -CONSTANTS.mu*y(2)-CONSTANTS.g*sin(y(1))/CONSTANTS.L ];
+                -mu*y(2) - (g/L)*sin(y(1)) ];
     
 return
