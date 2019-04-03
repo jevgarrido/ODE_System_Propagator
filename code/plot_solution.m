@@ -36,7 +36,21 @@ function [] = plot_this(type, which_fig)
             legend(PLOT.y_names, 'location', 'best')
         %------------------------------------------------------------------
         case 'B'
-            switch size(MAIN.y,1) 
+            switch size(MAIN.y,1)
+                case 6
+                    x   = [MAIN.y(1,:);MAIN.y(1,:)];
+                    y   = [MAIN.y(2,:);MAIN.y(2,:)];
+                    z   = [MAIN.y(3,:);MAIN.y(3,:)];
+                    xlabel(PLOT.y_names{1})
+                    ylabel(PLOT.y_names{2})
+                    zlabel(PLOT.y_names{3})
+                    if isfield(PLOT, 'sphere') && logical(PLOT.sphere)
+                        [Xsph,Ysph,Zsph] = sphere(30);
+                        Xsph = CONST.Re*Xsph;
+                        Ysph = CONST.Re*Ysph;
+                        Zsph = CONST.Re*Zsph;
+                        surf(Xsph, Ysph, Zsph, 'facecolor', [80, 80, 220]./255)
+                    end
                 case 3
                     x   = [MAIN.y(1,:);MAIN.y(1,:)];
                     y   = [MAIN.y(2,:);MAIN.y(2,:)];
