@@ -19,8 +19,8 @@ Enjoy :)
 
 ![alt text]( https://github.com/jevgarrido/ODE_System_Solver/blob/master/examples/predator_prey/Predator_Prey_Type_A.png )
 
-![alt text]( https://github.com/jevgarrido/ODE_System_Solver/blob/master/examples/oscilatory_motion/Oscillatory_Type_C.png )
-
 ![alt text]( https://github.com/jevgarrido/ODE_System_Solver/blob/master/examples/pendulum/Pendulum_Type_B.png )
+
+![alt text]( https://github.com/jevgarrido/ODE_System_Solver/blob/master/examples/oscilatory_motion/Oscillatory_Type_C.png )
 
 ![alt text]( https://github.com/jevgarrido/ODE_System_Solver/blob/master/examples/Lorenz_system/Lorenz_Type_B.png )
