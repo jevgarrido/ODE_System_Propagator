@@ -4,19 +4,13 @@
 	. name and units of the states and of the independent variable.
 	. position of labels.
 	. title of plot/plots.
-	
-+ Implement simulation (when the states are coordinates)
-	. Type A - default plotting (time in h-axis);
-	. Type B - 2-D or 3-D coordinates, with time represented by color;
-	. Type C - 2-D coordinates with time represented by 3rd dimension;
-	
-+ Regarding Type A plots:
-	. Color should distinguish exact solution from mehtod(s);
-	. Shapes should distinguish the specific states.
-	
+
++ Implement embeded methods for truncation error estimation and subsequent implementation of adaptive stepsize.
 
 + Add option to solve with various methods
 	. choose to plot the solutions toguether for comparison or to plot them in separate figures.
-
-
-+ Implement embeded methods for truncation error estimation and subsequent implementation of adaptive stepsize.
+	
++ Regarding Type A plots:
+	. Specific states should be ploted separately (but in the same figure)
+	. Shapes/ colors should distinguish methods within each ploting;
+	

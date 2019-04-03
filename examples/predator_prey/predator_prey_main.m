@@ -16,7 +16,7 @@ function [] = predator_prey_main()
     MAIN.step       = 0.01;                     % Step size
 
     % Parameters associated with the plotting
-    PLOT.types      = {'A'};
+    PLOT.types      = {'A', 'C'};
     PLOT.y_names    = {'Number of Rabbits', 'Number of Foxes'};
     PLOT.y_units    = {'unit', 'unit'};
     PLOT.ode45      = 1;             % Compare with 'ode45'? Yes: 1, No: 0

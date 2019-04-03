@@ -1,5 +1,6 @@
 function [] = main(project)
     
+    close all
     global MAIN CONST PLOT
     MAIN    = [];
     CONST   = [];

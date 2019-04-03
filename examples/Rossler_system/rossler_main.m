@@ -15,8 +15,8 @@ function [] = rossler_main()
     MAIN.step       = 0.01;                % Step size
     
     % Parameters associated with the plotting
-    PLOT.types      = {'A'};
-    PLOT.y_names    = {'x', 'y', 'z'};
+    PLOT.types      = {'A', 'B'};
+    PLOT.y_names    = {'X Coordinate', 'y Coordinate', 'z Coordinate'};
     PLOT.y_units    = {'unit', 'unit'};
     PLOT.ode45      = 1;             % Compare with 'ode45'? Yes: 1, No: 0
 end

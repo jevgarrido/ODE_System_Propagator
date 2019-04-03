@@ -15,7 +15,7 @@ function [] = oscillatory_main()
     MAIN.step       = 0.01;                     % Step size
     
     % Parameters associated with the plotting
-    PLOT.types      = {'A'};
+    PLOT.types      = {'A', 'B'};
     PLOT.y_names    = {'Position', 'Velocity'};
     PLOT.y_units    = {'m', 'm/s'};
     PLOT.ode45      = 1;             % Compare with 'ode45'? Yes: 1, No: 0
