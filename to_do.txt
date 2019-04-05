@@ -1,15 +1,10 @@
 # To work on
 
-+ Improve the ploting preferences set by the user in the main function - examples of preferences:
-	. name and units of the states and of the independent variable.
-	. position of labels.
-	. title of plot/plots.
-
 + Implement embeded methods for truncation error estimation and subsequent implementation of adaptive stepsize.
 
 + Implement Implicit methods (Multiple-step predictor-corrector).
 	. predictor with Adams-Bashfoth and corrector with Adams-Moulton (order is user selectable);
-	. First steps with Runge-Kutta 4th Order.
+	. First steps with Explicit or Embeded method.
 	
 + Implement Implicit methods (Single-step predictor-corrector).
 	. predictor - corrector for the states - y(n+1);
