@@ -7,10 +7,13 @@
 
 + Implement embeded methods for truncation error estimation and subsequent implementation of adaptive stepsize.
 
-+ Add option to solve with various methods
-	. choose to plot the solutions toguether for comparison or to plot them in separate figures.
++ Implement Implicit methods (Multiple-step predictor-corrector).
+	. predictor with Adams-Bashfoth and corrector with Adams-Moulton (order is user selectable);
+	. First steps with Runge-Kutta 4th Order.
 	
-+ Regarding Type A plots:
-	. Specific states should be ploted separately (but in the same figure)
-	. Shapes/ colors should distinguish methods within each ploting;
++ Implement Implicit methods (Single-step predictor-corrector).
+	. predictor - corrector for the states - y(n+1);
+	. predictor - corrector fot the derivarives - ki;
+
+
 	
