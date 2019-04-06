@@ -1,4 +1,4 @@
-function [] = orbital_simple_main
+function [] = orbital_mec_main
     close all, clear global
 
     global MAIN CONST PLOT
@@ -6,29 +6,34 @@ function [] = orbital_simple_main
     % Constants associated with the dynamics
     CONST.mu    = 3.987*10^5;   % km^3/s^2
     CONST.Re    = 6371;         % km
-    CONST.ecc   = 0.3;          % 1
-    CONST.axis  = 10000;        % km
-    CONST.incl  = 45;           % degrees
-
+    CONST.ecc   = 0.1;          % 1
+    CONST.axis  = 8000;        % km
+    CONST.incl  = -40;           % degrees (orbit inclination)
+    
+    CONST.r_eq = 6378;      %Earth radius at the equator km 
+    CONST.J2 = 1082.62668*10^-6;
+    CONST.include_J2 = 1;
+    
+    % Defifing the initial state according to the specified orbit
     CONST.r0 = distance(CONST.axis, CONST.ecc, 0);
     CONST.v0 = visviva(CONST.r0, CONST.axis, CONST.mu);
     CONST.r0 = vectorize(CONST.r0, pi/2, 0);
     CONST.v0 = vectorize(CONST.v0, pi/2 - CONST.incl*pi/180, pi/2);
 
-    CONST.y0    = [CONST.r0, CONST.v0]; % Initial state
-    CONST.tspan = [0, 100*24*60];       % Start time, end time [min]
+    CONST.y0    = [CONST.r0; CONST.v0]; % Initial state
+    CONST.tspan = [0, 400*24*60];       % Start time, end time [min]
     %----------------------------------------------------------------------
 
     % Parameters associated with the computation
     MAIN.dynamics   = 'orbital_mec_dynamics';    % Name of dynamics function
     MAIN.method     = {'RK_8-12'};                  % Choose the method
-    MAIN.step       = 100;                        	% Step size [min]
+    MAIN.step       = 150;                        	% Step size [min]
 
     % Parameters associated with the plotting
     PLOT.types      = {'A', 'B'};
     PLOT.y_names    = {'Pos x [m]','Pos y [m]','Pos z [m]', 'Vel x [m/s]','Vel y [m/s]','Vel z [m/s]'};
     PLOT.toguether  = 0;    % Possible if using only one method
-    PLOT.ode45      = 1;    % Compare with 'ode45'?
+    PLOT.ode45      = 0;    % Compare with 'ode45'?
     PLOT.sphere     = CONST.Re;
 
     % Call the main function
@@ -52,5 +57,5 @@ function vec = vectorize(modulus, theta, phi)
     x = modulus.*sin(theta).*cos(phi);
     y = modulus.*sin(theta).*sin(phi);
     z = modulus.*cos(theta);
-    vec = [x, y, z];
+    vec = [x; y; z];
 end

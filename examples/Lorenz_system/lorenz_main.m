@@ -4,7 +4,7 @@ function [] = lorenz_main
     global MAIN CONST PLOT
     
     % Constants associated with the dynamics
-    CONST.y0    = [-10, -3, 1];     % Initial state
+    CONST.y0    = [-10, -3, 30];    % Initial state
     CONST.tspan = [0, 50];          % Start time, end time
     CONST.sigma = 10;
     CONST.rho   = 28;
@@ -13,7 +13,7 @@ function [] = lorenz_main
     % Parameters associated with the computation
     MAIN.dynamics   = 'lorenz_dynamics';    % Name of dynamics function
     MAIN.method     = {'RK_4'};             % Choose the method(s)
-    MAIN.step       = 0.01;                 % Step size
+    MAIN.step       = 0.001;                 % Step size
 
     % Parameters associated with the plotting
     PLOT.types      = {'A', 'B'};
