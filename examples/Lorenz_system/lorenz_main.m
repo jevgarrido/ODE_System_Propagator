@@ -1,5 +1,6 @@
-function [] = lorenz_main()
-        
+function [] = lorenz_main
+    close all, clear global
+    
     global MAIN CONST PLOT
     
     % Constants associated with the dynamics
@@ -19,4 +20,7 @@ function [] = lorenz_main()
     PLOT.y_names    = {'X', 'Y', 'Z'};
     PLOT.y_units    = {'unit', 'unit', 'unit'};
     PLOT.ode45      = 0;             % Compare with 'ode45'? Yes: 1, No: 0
+    
+    % Call the main function
+    main;
 end

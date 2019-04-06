@@ -1,11 +1,8 @@
-function [] = main(project)
-    
-    load_this(project);
+function [] = main
 
     select_method;
     
     run_method;
     
     plot_solution;
-    
 end
