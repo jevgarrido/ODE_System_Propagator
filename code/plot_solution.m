@@ -4,6 +4,7 @@ function [] = plot_solution()
 
     if numel(MAIN.method) > 1
         PLOT.types = {'A'};
+        disp('To plot Type B or Type C graphs make sure to use only one method.')
     end
     
     % Tells us how many plot types were selected

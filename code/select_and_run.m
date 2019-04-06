@@ -9,12 +9,11 @@ function [] = select_and_run
         run_method(jj);
     end
 
-    % Run ode45() if selected
+    % Run ode45 if selected
     if PLOT.ode45
         fun_name = MAIN.dynamics;
         tspan    = CONST.tspan;
         y0       = reshape(CONST.y0,[],1);
         [MAIN.t_ode, MAIN.y_ode] = ode45(fun_name, tspan, y0);
     end
-    
 end

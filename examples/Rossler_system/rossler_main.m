@@ -12,14 +12,14 @@ function [] = rossler_main
 
     % Parameters associated with the computation
     MAIN.dynamics   = 'rossler_dynamics';   % Name of dynamics function
-    MAIN.method     = {'RK_8-12'};            % Choose the method
-    MAIN.step       = 0.01;                % Step size
+    MAIN.method     = {'RK_4', 'RK_8-12'};            % Choose the method
+    MAIN.step       = 0.1;                % Step size
 
     % Parameters associated with the plotting
     PLOT.types      = {'A', 'B'};
-    PLOT.y_names    = {'X Coordinate', 'y Coordinate', 'z Coordinate'};
-    PLOT.y_units    = {'unit', 'unit'};
-    PLOT.ode45      = 0;             % Compare with 'ode45'? Yes: 1, No: 0
+    PLOT.y_names    = {'X Coordinate', 'Y Coordinate', 'Z Coordinate'};
+    PLOT.toguether  = 0;    % Plot the states in the same graph?
+    PLOT.ode45      = 1;    % Compare with 'ode45'?
 
     % Call the main function
     main;
