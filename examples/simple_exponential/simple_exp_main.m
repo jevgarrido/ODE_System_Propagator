@@ -10,7 +10,7 @@ function [] = simple_exp_main
 
     % Parameters associated with the computation
     MAIN.dynamics   = 'simple_exp_dynamics';    % Name of dynamics function
-    MAIN.method     = 'RK_8-12';                % Choose the method
+    MAIN.method     = {'RK_8-12'};                % Choose the method
     MAIN.step       = 0.001;                    % Step size
 
     % Parameters associated with the plotting

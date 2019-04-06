@@ -1,4 +1,4 @@
-function [] = run_method()
+function [] = run_method(jj)
     global MAIN CONST
     
     y0      = reshape(CONST.y0, [], 1);
@@ -14,7 +14,7 @@ function [] = run_method()
     n_iter  = round(tspan(2)/h);
     
     % Declare solution array
-    MAIN.y  = [y0, zeros( y_dim, n_iter )];
+    MAIN.y(:,:,jj)  = [y0, zeros( y_dim, n_iter )];
     MAIN.t  = linspace(tspan(1), tspan(2), 1 + n_iter);
 
     % Solve the problem
@@ -25,6 +25,6 @@ function [] = run_method()
             state   = MAIN.y(:,nn) + h*K*a(ii,:)';
             K(:,ii) = feval( MAIN.dynamics, time, state );
         end
-        MAIN.y(:,nn+1) = MAIN.y(:,nn) + h.*K*b ;
+        MAIN.y(:,nn+1, jj) = MAIN.y(:,nn, jj) + h.*K*b ;
     end
 end

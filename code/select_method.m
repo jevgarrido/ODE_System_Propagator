@@ -1,17 +1,19 @@
-function [] = select_method()
+function [] = select_method(method)
     global MAIN
     
-    switch MAIN.method
+    switch method
         case 'Euler'    % 1st Order
             MAIN.a = 0;
             MAIN.b = 1;
             MAIN.c = 0;
+            MAIN.method_type = 'Explicit';
             
         case 'MidPoint' % 2nd Order
             MAIN.a = [ 0 0;...
                        1/2 0 ];
             MAIN.b = [ 0 1 ]';
             MAIN.c = [ 0 1/2 ];
+            MAIN.method_type = 'Explicit';
 
         case 'RK_4'     % 4th Order
             MAIN.a = [   0   0 0 0;...
@@ -20,6 +22,7 @@ function [] = select_method()
                          0   0 1 0];
             MAIN.b = [ 1/6 1/3 1/3 1/6]';
             MAIN.c = [ 0 1/2 1/2 1];
+            MAIN.method_type = 'Explicit';
             
         case 'RK_8-12'  % 8th Order with 12 intermediate steps
             a1  = zeros(1,12);
@@ -37,5 +40,6 @@ function [] = select_method()
             MAIN.a = [a1; a2; a3; a4; a5; a6; a7; a8; a9; a10; a11; a12];
             MAIN.b = [41, 0, 0, 0, 0, 216, 272, 27, 27, 36, 180, 41]'/840;
             MAIN.c = [0, 1/9, 1/6, 1/4, 1/10, 1/6, 1/2, 2/3, 1/3, 5/6, 5/6, 1];
+            MAIN.method_type = 'Explicit';
     end
 end

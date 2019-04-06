@@ -12,7 +12,7 @@ function [] = pendulum_main
 
     % Parameters associated with the computation
     MAIN.dynamics   = 'pendulum_dynamics';  % Name of dynamics function
-    MAIN.method     = 'RK_8-12';            % Choose the method
+    MAIN.method     = {'RK_8-12'};            % Choose the method
     MAIN.step       = 0.01;                 % Step size
 
     % Parameters associated with the plotting

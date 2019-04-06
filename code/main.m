@@ -1,8 +1,7 @@
 function [] = main
 
-    select_method;
-    
-    run_method;
+    select_and_run;
     
     plot_solution;
+    
 end

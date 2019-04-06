@@ -12,14 +12,13 @@ function [] = oscillatory_main
 
     % Parameters associated with the computation
     MAIN.dynamics   = 'oscillatory_dynamics'; 	% Name of dynamics function
-    MAIN.method     = 'RK_4';                   % Choose the method
+    MAIN.method     = {'RK_4'};           % Choose the method
     MAIN.step       = 0.01;                     % Step size
 
     % Parameters associated with the plotting
     PLOT.types      = {'A', 'B', 'C'};
-    PLOT.y_names    = {'Position', 'Velocity'};
-    PLOT.y_units    = {'m', 'm/s'};
-    PLOT.ode45      = 0;             % Compare with 'ode45'? Yes: 1, No: 0
+    PLOT.y_names    = {'Position [m]', 'Velocity [m/s]'};
+    PLOT.ode45      = 1;             % Compare with 'ode45'? Yes: 1, No: 0
 
     % Call the main function
     main;
