@@ -30,4 +30,4 @@ Enjoy :)
 ![alt text]( https://github.com/jevgarrido/ODE_System_Solver/blob/master/examples/Lorenz_system/Lorenz_Type_B.png )
 
 #### Simple Orbital Motion
-![alt text]( https://github.com/jevgarrido/ODE_System_Solver/blob/master/examples/orbital_mechanics_simple/Orbital_Simple_Type_B.png )
+![alt text]( https://github.com/jevgarrido/ODE_System_Solver/blob/master/examples/orbital_mechanics/Orbital_Simple_Type_B.png )
