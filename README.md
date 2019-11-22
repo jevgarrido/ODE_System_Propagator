@@ -1,7 +1,5 @@
 # Numerical Solver for Systems of Ordinary Differential Equations
 
-[![button]](https://github.com/jevgarrido)
-
 This tool uses Numerical methods to solve ODE Systems - the specific method is user-selectable
 
 So far, included methods are: Forward Euler, Explicit Midpoint, Runge-Kutta 4th Order, and Runge-Kutta 8th Order. All explicit.
