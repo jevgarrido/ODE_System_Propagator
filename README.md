@@ -1,6 +1,6 @@
 # Numerical Solver for Systems of Ordinary Differential Equations
 
-[![button]("My Profile")](https://github.com/jevgarrido)
+[![button]](https://github.com/jevgarrido)
 
 This tool uses Numerical methods to solve ODE Systems - the specific method is user-selectable
 
