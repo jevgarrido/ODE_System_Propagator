@@ -1,4 +1,4 @@
-function [] = lorenz_main
+function lorenz_main
     close all, clear global
     
     global MAIN CONST PLOT
