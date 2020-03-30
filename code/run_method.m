@@ -7,7 +7,7 @@ function [] = run_method(jj)
     a       = sparse(MAIN.a);
     b       = sparse(MAIN.b);
     c       = sparse(MAIN.c);
-    ii_max  = length(MAIN.c);
+    ii_max  = length(c);
     
     % Get dimension of the problem
     y_dim   = length(y0);       

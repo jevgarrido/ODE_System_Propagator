@@ -1,4 +1,4 @@
-function [] = main
+function main
 
     select_and_run;
     

@@ -1,4 +1,4 @@
-function [] = plot_solution()
+function plot_solution
 
     global MAIN PLOT
 
