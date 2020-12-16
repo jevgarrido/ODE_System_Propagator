@@ -1,4 +1,4 @@
-# Numerical Solver for Systems of Ordinary Differential Equations
+# Propagator of Systems of Ordinary Differential Equations Given Initial Conditions.
 
 This tool uses Numerical methods to solve ODE Systems - the specific method is user-selectable
 
